@@ -178,7 +178,7 @@
     <li>
       
       <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-aws.html" target="_self">
-        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.0</span></span>
+        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.1</span></span>
       </a>
                      
     </li>
@@ -592,7 +592,7 @@
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
 </script><div class="prod-nav" id="product-nav">
-  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/ja-jp/cloud-manager-family/"><img src="/ja-jp/cloud-volumes-ontap-9111-relnotes/images/left_arrow.png" alt=""><pre>Cloud Manager のすべてのドキュメント</pre></a>
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/ja-jp/cloud-manager-family/"><img src="/ja-jp/cloud-volumes-ontap-9111-relnotes/images/left_arrow.png" alt=""><pre>BlueXPのすべてのマニュアル</pre></a>
 </div><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li 
       data-pdf-exists="true" 
@@ -768,7 +768,7 @@
 
         
         <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com/ja-jp/cloud-manager-family/">Cloud Manager</a>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-family/">BlueXP</a>
         </li>
         
 
@@ -804,7 +804,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-16 20:27:45 +0000">09/16/2022</time>
+    <time datetime="2022-12-09 16:23:14 +0000">12/09/2022</time>
     
   
 
@@ -828,7 +828,7 @@
 <p>Cloud Volumes ONTAP システムの最大システム容量はライセンスで決まります。最大システム容量には、ディスクベースのストレージに加えて、データの階層化に使用されるオブジェクトストレージが含まれます。</p>
 </div>
 <div class="paragraph">
-<p>ネットアップでは、システム容量の制限を超えた使用はサポートしていません。ライセンス容量の上限に達すると、 Cloud Manager は「 Action Required 」メッセージを表示し、ディスクを追加できなくなります。</p>
+<p>ネットアップでは、システム容量の制限を超えた使用はサポートしていません。ライセンス容量の上限に達すると、「Action Required」メッセージが表示され、ディスクを追加できなくなります。</p>
 </div>
 <div class="paragraph">
 <p>一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。その場合、で容量の制限に達することができます <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">"使用頻度の低いデータをオブジェクトストレージに階層化します"</a>。詳細については、以下の容量とディスクの制限を参照してください。</p>
@@ -872,10 +872,12 @@
 </tbody>
 </table>
 <div class="paragraph">
+<div class="title">HA の場合、ライセンスの容量制限はノード単位か、 HA ペア全体に適用されるか</div>
 <p>容量制限は HA ペア全体の容量制限です。ノード単位ではありません。たとえば、 Premium ライセンスを使用する場合、両方のノード間で最大 368 TiB の容量を確保できます。</p>
 </div>
 <div class="paragraph">
-<p>いいえ、できません。AWS HA ペアのデータは、障害発生時にデータを利用できるように、ノード間で同期的にミラーされます。たとえば、ノード A で 8TiB ディスクを購入した場合、 Cloud Manager は、ミラーリングされたデータに使用する 8 TiB のディスクをノード B にも割り当てます。16TiB の容量がプロビジョニングされましたが、ライセンスの上限には 8TiB しかカウントされません。</p>
+<div class="title">AWS の HA システムでは、ミラーリングされたデータは容量制限にカウントされますか。</div>
+<p>いいえ、できません。AWS HA ペアのデータは、障害発生時にデータを利用できるように、ノード間で同期的にミラーされます。たとえば、ノードAで8TiBのディスクを購入した場合、ミラーリングされたデータに使用される8TiBのディスクがノードBにも割り当てられます。16TiB の容量がプロビジョニングされましたが、ライセンスの上限には 8TiB しかカウントされません。</p>
 </div>
 </div>
 </div>
@@ -1075,13 +1077,7 @@
 <li>
 <p>ノードベースのライセンスを使用する場合は、Cloud Volumes ONTAP BYOLシステム用に複数のノードベースのライセンスを購入して、368TiBを超える容量を割り当てることができます。</p>
 <div class="paragraph">
-<p>シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">"使用頻度の低いデータをオブジェクトストレージに階層化します"</a>。 <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">"Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"</a>。</p>
-</div>
-</li>
-<li>
-<p>このリリースの新しいCloud Volumes ONTAP システムでは、c4、m4、およびR4インスタンスタイプはサポートされません。</p>
-<div class="paragraph">
-<p>ただし、これらのインスタンスタイプのいずれかで実行している場合は、このリリースにシステムをアップグレードできるため、これらのインスタンスタイプのディスク制限は引き続き表示されます。</p>
+<p>シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">"使用頻度の低いデータをオブジェクトストレージに階層化します"</a>。 <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">"Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"</a></p>
 </div>
 </li>
 </ul>
@@ -1114,12 +1110,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">19<sup>2</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C4 、 M4 、および R4 インスタンス</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
 </tr>
 </tbody>
@@ -1178,14 +1168,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1 ライセンスあたり 368 TiB</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C4 、 M4 、および R4 インスタンス</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">544 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1 ライセンスあたり 368 TiB</p></td>
-</tr>
 </tbody>
 </table>
 <div class="olist arabic">
@@ -1227,12 +1209,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">16<sup>2</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">256TiB です</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C4 、 M4 、および R4 インスタンス</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">31.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
 </tr>
 </tbody>
@@ -1291,14 +1267,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">256TiB です</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1 ライセンスあたり 368 TiB</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C4 、 M4 、および R4 インスタンス</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">31.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">496TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1 ライセンスあたり 368 TiB</p></td>
-</tr>
 </tbody>
 </table>
 <div class="olist arabic">
@@ -1326,43 +1294,30 @@
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 26%;">
-<col style="width: 26%;">
-<col style="width: 48%;">
+<col style="width: 40%;">
+<col style="width: 60%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">ライセンスタイプ</th>
-<th class="tableblock halign-left valign-top">インスタンスファミリー</th>
 <th class="tableblock halign-left valign-top">Storage VM の最大数</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">* Freemium *</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^</p>
-</li>
-</ul>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">* 容量ベースの PAYGO または BYOL * <sup>3</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^</p>
-</li>
-</ul>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">* ノードベースの PAYGO *</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C4 、 M4 、および R4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ノードベースの PAYGO *</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -1375,34 +1330,7 @@
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>データ提供用の Storage VM × 1</p>
-</li>
-<li>
-<p>ディザスタリカバリ用の Storage VM × 1</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">* ノードベースの BYOL * <sup>4</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C4 、 M4 、および R4</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>データ提供用の Storage VM × 1</p>
-</li>
-<li>
-<p>ディザスタリカバリ用の Storage VM × 1</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ノードベースの BYOL * <sup>4</sup></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -1660,7 +1588,7 @@
 <p>この数値は、 Cloud Volumes ONTAP の導入とセットアップ後にポート e0a で使用可能な残りのプライベート IP アドレスの数を示します。たとえば、 *.2xlarge システムでは、ネットワークインターフェイスごとに最大 15 の IP アドレスがサポートされます。単一の AZ に HA ペアを導入すると、 5 つのプライベート IP アドレスがポート e0a に割り当てられます。そのため、インスタンスタイプが *.2xlarge の HA ペアでは、追加の Storage VM 用にプライベート IP アドレスが 10 個残っています。</p>
 </li>
 <li>
-<p>これらの列に表示される数には、 Cloud Manager がデフォルトで作成する初期 Storage VM が含まれます。たとえば、この列に 24 個表示されている場合、合計 23 個の Storage VM を追加で作成でき、合計 24 個の VM が表示されます。</p>
+<p>これらの列に表示される数には、BlueXPでデフォルトで作成される初期Storage VMが含まれます。たとえば、この列に 24 個表示されている場合、合計 23 個の Storage VM を追加で作成でき、合計 24 個の VM が表示されます。</p>
 </li>
 <li>
 <p>Storage VM の管理 LIF はオプションです。管理 LIF は、 SnapCenter などの管理ツールへの接続を提供します。</p>
