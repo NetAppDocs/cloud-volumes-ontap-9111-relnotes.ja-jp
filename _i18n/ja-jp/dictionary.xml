@@ -697,4 +697,8 @@
   <block id="8e36f0f32d75ebd3c7851e726c538544" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block></block>
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXPブログ</block>
   <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">BlueXPのすべてのマニュアル</block>
+  <block id="90d21e45df2b69a8345b8381643767db" category="section-title">9.11.1 P4（2022年12月18日）</block>
+  <block id="c4426846e80c44f78da5d2553c87de70" category="paragraph">バージョン3.9.24以降を実行しているコネクタがある場合は、すべてのクラウドプロバイダのCloud Volumes ONTAP で9.11.1 P4パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
+  <block id="cae74b75cb879fa6011c4bc1e9acafed" category="inline-link">P4 パッチで修正されたバグのリストを確認します</block>
+  <block id="fdd4c7c7c56a9b411ca6cf05fb69ae8a" category="paragraph"><block ref="f533ed73bde5a6438c74b91c6480dbdb" category="inline-link-rx"></block> （NetApp Support Siteへのログインが必要です）。</block>
 </blocks>

@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.11.1では、新しい機能拡張が追加されてい
 
 
 
+== 9.11.1 P4（2022年12月18日）
+
+バージョン3.9.24以降を実行しているコネクタがある場合は、すべてのクラウドプロバイダのCloud Volumes ONTAP で9.11.1 P4パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.11.1P4["P4 パッチで修正されたバグのリストを確認します"^] （NetApp Support Siteへのログインが必要です）。
+
+
+
 == 9.11.1 P3（2022年10月19日）
 
 バージョン3.9.22以降を実行しているコネクタがある場合、すべてのクラウドプロバイダで9.11.1 P3パッチをCloud Volumes ONTAP で使用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
