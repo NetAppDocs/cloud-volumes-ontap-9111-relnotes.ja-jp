@@ -272,7 +272,6 @@
   <block id="5631d6c294c4b6398535b6dd0c9a2475" category="list-text">DS14_v2^1 ^</block>
   <block id="1c593d3ddd7d37cba983231fd6abdd9d" category="list-text">DS15_v2 ^1</block>
   <block id="0b9dfa1d6e582593bcd75a94bfaa5add" category="list-text">E48s_v3^1^</block>
-  <block id="8e54c9dd2c325f6430e1789d91c327ee" category="list-text">E8ds_v4^1^</block>
   <block id="5d47d15bb6c95cde595a22f670bc8cdf" category="list-text">E32ds_v4^1^</block>
   <block id="a9161f4d77d799baa3a3dc4cfeaefca3" category="list-text">E48ds_v4^1^</block>
   <block id="4e1b6146fa2cb1efc8bff10f1cf7e93c" category="list-text">E80ids_v4^1,2^</block>
@@ -368,7 +367,6 @@
   <block id="c2d000408838a6b2031536d54c067fd9" category="paragraph">課金は、 Keystone Flex サブスクリプションでの 1 つ以上の Cloud Volumes ONTAP HA ペアのコミット済み容量に基づいています。</block>
   <block id="0e1a6eb7eed81777ed9d0610be51df3b" category="paragraph">以前のノード単位のライセンスモデルは、ライセンスを購入済みの既存のお客様や、アクティブな Marketplace サブスクリプションを所有しているお客様には引き続き提供されます。</block>
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">これらのライセンスオプションの詳細については、こちらをご覧ください</block>
-  <block id="f3b3e9858be5dbfaf6c39891db3263a2" category="paragraph"><block ref="f3b3e9858be5dbfaf6c39891db3263a2" category="inline-link-rx"></block></block>
   <block id="9141535b8d150812f3cded29f090ad8c" category="summary">Google Cloud では、いくつかの Cloud Volumes ONTAP 構成がサポートされています。</block>
   <block id="9e931b1cee40a7346d1f06dd6a75ba8e" category="doc">Google Cloud でサポートされている構成</block>
   <block id="0c11951245f2ef7895ea0fc514386d6e" category="paragraph">Cloud Volumes ONTAP は、フォールトトレランスとノンストップオペレーションを実現するために、 Google Cloud Platform ではシングルノードシステムとして、ハイアベイラビリティ（ HA ）ペアのノードとして利用できます。</block>
@@ -405,12 +403,6 @@
   <block id="71674eaa07f12640df0ea0be77ecd9ac" category="inline-link">Cloud Backup Service を使用して ONTAP データをバックアップおよびリストアする方法について説明します</block>
   <block id="e81db3857b1943249df996fe0b3ed679" category="paragraph"><block ref="935fff627382fb455a98804a9e37d559" category="inline-link-rx"></block>。</block>
   <block id="3d880dec2575e676954faf6a6a218972" category="admonition">データの整合性は、 WAFL ファイルシステムの ONTAP 整合ポイントによって決まります。WAFL ファイルシステムを休止して crash-consistent バックアップを実行できるのは、 ONTAP のみです。</block>
-  <block id="d302a39827e370146d2861389e98e60c" category="section-title">中国地域でのサポート</block>
-  <block id="da059bd73f7531380888607adbbd03aa" category="paragraph">Cloud Volumes ONTAP は中国で次のようにサポートされています。</block>
-  <block id="cbf02fb0cb394b4b19fb0788f9b62554" category="list-text">Cloud Volumes ONTAP 9.6 は、 AWS 中国のリージョンでサポートされます。</block>
-  <block id="fcf30aaa0348521d4d4752992c9db378" category="list-text">シングルノードシステムがサポートされます。</block>
-  <block id="80a79e3e92d4834ae8746d205e83c105" category="list-text">ネットアップから直接購入したライセンスはサポートされます。</block>
-  <block id="a5a1e4029969159a5f8fdeddd3fb7e1b" category="paragraph">その他の場所、バージョン、構成、ライセンスはすべてサポートされていません。</block>
   <block id="38220a2514a2fcb218be440c035b4175" category="section-title">Cloud Volumes ONTAP は、予約済みおよびオンデマンドの VM インスタンスをサポートします</block>
   <block id="8ce602039d8c7d53c95e1f62b1d83ef0" category="paragraph">Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。それ以外のタイプの VM インスタンスはサポートされません。</block>
   <block id="f9492a63b4f60679d003c1e9c0ebbb18" category="paragraph">アプリケーションリソースの自動管理ソリューションでは、 Cloud Volumes ONTAP システムを管理しないでください。サポートされていない構成に変更される可能性があります。たとえば、このソリューションでは、 Cloud Volumes ONTAP をサポート対象外の VM インスタンスタイプに変更する場合があります。</block>
@@ -705,4 +697,5 @@
   <block id="fda5e84662513f8c679709d95801bfd1" category="paragraph">バージョン3.9.26以降を実行しているコネクタがある場合は、9.11.1 P6パッチがCloud Volumes ONTAP for Azureで使用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
   <block id="4d90d21642c7222312363da000d7409f" category="inline-link">P6 パッチで修正されたバグのリストを表示します</block>
   <block id="721dd678e35facf16435108ddc0af900" category="paragraph"><block ref="db4cc5c156ec22fad0dd710c41cf2743" category="inline-link-rx"></block> （NetApp Support Siteへのログインが必要です）。</block>
+  <block id="c46270a9bdf069bd0e015f7953e02355" category="paragraph"><block ref="c46270a9bdf069bd0e015f7953e02355" category="inline-link-rx"></block></block>
 </blocks>
